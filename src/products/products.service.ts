@@ -97,7 +97,6 @@ export class ProductsService {
       
     } catch (error) {
       this.handleDbExceptions(error);
-      
     }
 
   }
