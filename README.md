@@ -12,13 +12,13 @@
 ```
 docker-compose up -d
 ```
-6. Levantar: ``` yarm start:dev ```
+6. Levantar: 
+``` yarm start:dev ```
 
 7. Ejecutar Seed para cargar data:
 
 ```
 localhost:3000/api/seed
-
 ```
 
 ```
