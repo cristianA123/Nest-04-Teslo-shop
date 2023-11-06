@@ -21,5 +21,9 @@ docker-compose up -d
 localhost:3000/api/seed
 ```
 
-```
-```
+# Tech Used
+* Nest
+* Postgres
+* TypeOrm
+* Docker-compose
+* Typescript
