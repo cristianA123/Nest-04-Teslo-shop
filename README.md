@@ -13,7 +13,7 @@
 docker-compose up -d
 ```
 6. Levantar: 
-``` yarm start:dev ```
+``` npm run start:dev ```
 
 7. Ejecutar Seed para cargar data:
 
