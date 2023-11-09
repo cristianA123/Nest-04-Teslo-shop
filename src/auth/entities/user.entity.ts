@@ -1,6 +1,7 @@
 
-import { BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Min } from 'class-validator';
+import { Product } from 'src/products/entities';
 
 @Entity('users')
 export class User {
@@ -35,6 +36,13 @@ export class User {
         default: ['user']
     })
     roles: string[];
+
+
+    @OneToMany(
+        ( ) => Product,
+        ( product ) => product.user
+    )
+    product: Product;
 
     @BeforeInsert()
     checkFieldsBeforeInsert(){
