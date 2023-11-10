@@ -7,6 +7,13 @@
 * User
 * Product
 
+# Tech Used
+* Nest
+* Postgres
+* TypeOrm
+* Docker-compose
+* Typescript
+
 # Teslo Api
 
 1. Clonar proyecto
@@ -25,10 +32,3 @@ docker-compose up -d
 ```
 localhost:3000/api/seed
 ```
-
-# Tech Used
-* Nest
-* Postgres
-* TypeOrm
-* Docker-compose
-* Typescript
