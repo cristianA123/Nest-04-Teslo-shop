@@ -18,13 +18,10 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 
     PassportModule.register({ defaultStrategy: 'jwt' }),
 
-    //todo: ejecutar de forma asingcrona ...(2), (En este punto el JWT_SECRET !== undefinet)   
     JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: ( configService: ConfigService ) => {
-        // console.log('JWTTTTTTTTT (1)', configService.get('JWT_SECRET'));
-        // console.log('JWTTTTTTTTT (2)', process.env.JWT_SECRET);
           return {
             secret: configService.get('JWT_SECRET'),
             signOptions: {
@@ -33,31 +30,6 @@ import { JwtStrategy } from './strategies/jwt.strategy';
           }
       },
     })
-
-    //todo: ejecutar de forma asingcrona ...(1), (En este punto el JWT_SECRET !== undefinet)   
-    // JwtModule.registerAsync({
-    //   imports: [],
-    //   inject: [],
-    //   useFactory: () => {
-    //     console.log('JWTTTTTTTTT', process.env.JWT_SECRET);
-    //       return {
-    //         secret: process.env.JWT_SECRET,
-    //         signOptions: {
-    //           expiresIn: '2h'
-    //         }
-    //       }
-    //   },
-    // })
-
-    //todo: ejecutar de forma singcrona, (En este punto el JWT_SECRET === undefinet)   
-
-    // JwtModule.register({ 
-    //   secret: process.env.JWT_SECRET,
-    //   signOptions: {
-    //     expiresIn: '2h'
-    //   }
-    //  })
-
   ],
   exports: [ TypeOrmModule, JwtStrategy, PassportModule, JwtModule ]
 })

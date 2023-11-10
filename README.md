@@ -2,6 +2,11 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+# Modules
+* Auth (JWT, Guards)
+* User
+* Product
+
 # Teslo Api
 
 1. Clonar proyecto
